@@ -18,4 +18,17 @@ when we know the value we are counting will always be non-negative."
 """
 def hamming_weight(n):
     # Your code here
+    count = 0
 
+    while n:
+
+        n &= n - 1
+
+        count += 1
+
+    return count
+
+
+print(hamming_weight(n = 0o00000000000000000000001000000011))
+print(hamming_weight(n = 0o00000000000000000000000000001000))
+print(hamming_weight(n = 0o11111111111111111111111111111011))
